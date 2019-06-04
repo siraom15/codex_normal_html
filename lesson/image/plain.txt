@@ -1,0 +1,7 @@
+ <span style="color:brown"><span style="color:mediumblue">&lt;</span>img<span
+                                                style="color:red">
+                                                src<span style="color:mediumblue">="img_girl.jpg"</span>
+                                                alt<span style="color:mediumblue">="Girl in a
+                                                    jacket"</span> width<span style="color:mediumblue">="500"</span>
+                                                height<span style="color:mediumblue">="600"</span></span><span
+                                                style="color:mediumblue">&gt;</span><br></span>

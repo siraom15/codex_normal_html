@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="localhost/assets/pic/codex.png" type="image/x-icon">
+    <title>The Code X</title>
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <link rel="stylesheet" href="http://codex.sukhon.ac.th/assets/css/style.css">
+    <link rel="stylesheet" href="http://codex.sukhon.ac.th/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://codex.sukhon.ac.th/assets/css/loader.css">
+    <link rel="stylesheet" href="http://codex.sukhon.ac.th/assets/css/sidebar.css">
+    <link rel="stylesheet" href="http://codex.sukhon.ac.th/assets/css/backtotop.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="http://codex.sukhon.ac.th/assets/js/reqhtml.js"></script>
+    <script src="http://codex.sukhon.ac.th/assets/js/backtotop.js"></script>
+
+    <script>
+        function myFunction() {
+            myVar = setTimeout(showPage, 1000);
+        }
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("main").style.display = "block";
+
+        }
+        $(document).ready(() => {
+            $("#menu-toggle").click(function (e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+            reqHTML();
+        });
+
+    </script>
+    <style>
+        p {
+            font-size: 18px;
+        }
+
+        code {
+            font-size: 19px;
+        }
+
+        .udl {
+            text-decoration: underline;
+        }
+
+        .menu-toggle {
+            position: fixed;
+        }
+    </style>
+</head>
+
+<body class="bg-white kanit" onload="myFunction()">
+    <div id="loader"></div>
+    <div class="main" id="main" style="display:none;">
+        <div id="wrapper">
+            <!-- Sidebar -->
+            <div include-html="sidebar-warper.htm"></div>
+            <!-- /#sidebar-wrapper -->
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <a href="#menu-toggle" class="btn btn-outline-dark btn-sm" id="menu-toggle">แสดง/ซ่อน เมนู</a>
+                <button id="myBtn" onclick="topFunction()"><i class="fas fa-arrow-up"></i></button>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12 col-md-12 text-dark">
+                            <br>
+                            <div class="link">
+                                <div class="h1 text-center">การเชื่อมโยงใน HTML ( HTML Links)</div>
+                                <hr>
+                                <div class="alert alert-warning" role="alert">
+                                    <p>คุณจะพบลิ้งค์ในเกือบทุกหน้าของเว็บไซต์ ให้ผู้ใช้ Click
+                                        เพื่อเปลี่ยนหน้าหนึ่งไปอีกหน้าหนึ่ง</p>
+                                </div>
+                                <div class="card bg-white rounded shadow-lg" id="type-of-link">
+                                    <div class="card-body">
+                                        <div class="h4 udl">รูปแบบของการลิ้งค์</div>
+                                        <p>ใน HTML ลิงก์จะถูกกำหนดด้วยแท็ก <code>&lt;a&gt;</code> :</p>
+                                        <p>ปลายทางของลิงค์ถูกระบุในแอตทริบิวต์ <code>href</code> </p>
+                                        <p>เช่น ต้องการให้ลิ้งค์ไปสู่ website google.com สามารถเขียนได้เป็น
+                                            <code>&lt;a href="https://www.google.com/"&gt;</code> </p>
+                                        <p style="text-decoration: underline;">ตัวอย่างตาม Code ด่านล่าง</p>
+                                        <div class="example-code">
+                                            <div class="bg-light shadow-lg rounded card">
+                                                <div class="margin-2">
+                                                    <span class="tagnamecolor" style="color:brown"><span
+                                                            style="color:mediumblue">&lt;</span>a<span
+                                                            style="color:red">
+                                                            href<span
+                                                                style="color:mediumblue">="<i>url</i>"</span></span><span
+                                                            style="color:mediumblue">&gt;</span></span><i>link
+                                                        text</i><span class="tagnamecolor" style="color:brown"><span
+                                                            style="color:mediumblue">&lt;</span>/a<span
+                                                            style="color:mediumblue">&gt;</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        หรือ:
+                                        <div class="example-code">
+                                            <div class="bg-light shadow-lg rounded card">
+                                                <div class="margin-2">
+                                                    <span class="tagnamecolor" style="color:brown"><span
+                                                            style="color:mediumblue">&lt;</span>a<span
+                                                            style="color:red">
+                                                            href<span
+                                                                style="color:mediumblue">="http://codex.sukhon.ac.th"</span></span><span
+                                                            style="color:mediumblue">&gt;</span></span>ไปยังหน้าแรก
+                                                    <span class="tagnamecolor" style="color:brown"><span
+                                                            style="color:mediumblue">&lt;</span>/a<span
+                                                            style="color:mediumblue">&gt;</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="http://codex.sukhon.ac.th/playground/link-index.htm" target="_blank"
+                                            class="btn btn-warning btn-block text-white">ลองเขียนด้วยตนเอง !</a>
+                                    </div>
+                                </div>
+                                <br><br>
+                                <div class="card bg-white rounded shadow-lg" id="local-link">
+                                    <div class="card-body">
+                                        <div class="h4 udl" id="Local">ลิ้งค์เว็บไซต์ภายใน (Local Links)</div>
+                                        <p>จะเห็นว่า ตามตัวอย่างด่านบนจะเป็นการลิ้งค์ด้วย URL แบบเต็ม คือ https://.....
+                                        </p>
+                                        <p>แต่ถ้าเป็นการลิ้งค์ภายในเว็บไซต์เดียวกัน เราไม่จำเป็นต้องใส่ https: // www
+                                            ....
+                                            ตามตัวอย่างด่านล่าง</p>
+                                        <div class="example-code">
+                                            <div class="bg-light shadow-lg rounded card">
+                                                <div class="margin-2">
+                                                    <span class="tagnamecolor" style="color:brown"><span
+                                                            style="color:mediumblue">&lt;</span>a<span
+                                                            style="color:red">
+                                                            href<span
+                                                                style="color:mediumblue">="hello.html"</span></span><span
+                                                            style="color:mediumblue">&gt;</span></span>ลิ้งค์เว็บไซต์ภายใน
+                                                    <span class="tagnamecolor" style="color:brown"><span
+                                                            style="color:mediumblue">&lt;</span>/a<span
+                                                            style="color:mediumblue">&gt;</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="http://codex.sukhon.ac.th/playground/link-local.htm" target="_blank"
+                                            class="btn btn-warning btn-block text-white">ลองเขียนด้วยตนเอง !</a>
+                                    </div>
+                                </div>
+                                <br><br>
+                                <div class="card bg-white rounded shadow-lg" id="Ext-link">
+                                    <div class="card-body">
+                                        <div class="h4 udl" id="Extra">ลิ้งค์เว็บไซต์ภายนอก (External Links)</div>
+                                        <p>แต่ถ้าเป็นการลิ้งค์ภายนอก เราจำเป็นต้องใส่ URL แบบเต็ม ( https: // www ....)
+                                            หรือด้วยเส้นทางที่สัมพันธ์กับหน้าเว็บปัจจุบัน
+                                            ตามตัวอย่างด่านล่าง</p>
+                                        <div class="example-code">
+                                            <div class="bg-light shadow-lg rounded card">
+                                                <div class="margin-2">
+                                                    <span class="tagnamecolor" style="color:brown"><span
+                                                            style="color:mediumblue">&lt;</span>a<span
+                                                            style="color:red">
+                                                            href<span
+                                                                style="color:mediumblue">="http://codex.sukhon.ac.th"</span></span><span
+                                                            style="color:mediumblue">&gt;</span></span>CodeX
+                                                    <span class="tagnamecolor" style="color:brown"><span
+                                                            style="color:mediumblue">&lt;</span>/a<span
+                                                            style="color:mediumblue">&gt;</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="http://codex.sukhon.ac.th/playground/link-extra.htm" target="_blank"
+                                            class="btn btn-warning btn-block text-white">ลองเขียนด้วยตนเอง !</a>
+                                        <br>
+                                        <p>หรือ :</p>
+                                        <div class="example-code">
+                                            <div class="bg-light shadow-lg rounded card">
+                                                <div class="margin-2">
+                                                    <span class="tagnamecolor" style="color:brown"><span
+                                                            style="color:mediumblue">&lt;</span>a<span
+                                                            style="color:red">
+                                                            href<span
+                                                                style="color:mediumblue">="https://www.google.com"</span></span><span
+                                                            style="color:mediumblue">&gt;</span></span>Google website
+                                                    <span class="tagnamecolor" style="color:brown"><span
+                                                            style="color:mediumblue">&lt;</span>/a<span
+                                                            style="color:mediumblue">&gt;</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="http://codex.sukhon.ac.th/playground/link-extra-google.htm"
+                                            target="_blank"
+                                            class="btn btn-warning btn-block text-white">ลองเขียนด้วยตนเอง !</a>
+                                    </div>
+                                </div>
+                                <br><br>
+                                <div class="card bg-white rounded shadow-lg" id="img-link">
+                                    <div class="card-body">
+                                        <h4 class="udl">การลิ้งค์รูปภาพ</h4>
+                                        <br>
+                                        <div class="example-show">
+                                            <a href="https://www.google.com" target="_blank">
+                                                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+                                                    alt="Google Logo">
+                                            </a>
+                                            <br>
+                                            <!-- ลองกดที่รูปภาพ -->
+                                            <span class="badge badge-primary">ลองกดที่รูปภาพ</span>
+                                        </div><br>
+                                        <p>หากต้องการใช้รูปภาพเป็นลิงก์ให้วางแท็ก <code>&lt;img&gt;</code> ไว้ในแท็ก
+                                            <code>&lt;a&gt;</code> ตามตัวอย่างด่านล่าง:</p>
+                                        <div class="bg-light shadow-lg rounded card">
+                                            <div class="margin-2">
+                                                <span style="color:brown"><span class="tagcolor"
+                                                        style="color:mediumblue">&lt;</span>a<span style="color:red">
+                                                        href<span
+                                                            style="color:mediumblue">="https://www.google.com"</span></span><span
+                                                        class="tagcolor"
+                                                        style="color:mediumblue">&gt;</span></span><br>&nbsp;
+                                                <span style="color:brown"><span class="tagcolor"
+                                                        style="color:mediumblue">&lt;</span>img<span style="color:red">
+                                                        src<span
+                                                            style="color:mediumblue">="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"</span>
+                                                        alt<span style="color:mediumblue">="Google Logo"</span>
+                                                    </span><span class="tagcolor"
+                                                        style="color:mediumblue">&gt;</span></span><br><span
+                                                    style="color:brown"><span class="tagcolor"
+                                                        style="color:mediumblue">&lt;</span>/a<span class="tagcolor"
+                                                        style="color:mediumblue">&gt;</span></span>
+                                            </div>
+                                        </div>
+                                        <a href="http://codex.sukhon.ac.th/playground/img-ahref.htm" target="_blank"
+                                            class="btn btn-warning btn-block text-white">ลองเขียนด้วยตนเอง !</a>
+                                    </div>
+                                </div>
+                                <br><br>
+                                <div class="row">
+                                    <div class="col"><a href="../image/" class="btn btn-primary btn-block "><i
+                                                class="fas fa-arrow-left"></i> บทก่อนหน้า บทที่ 3 </a></div>
+                                    <div class="col"><a href="../layout/" class="btn btn-success btn-block ">บทถัดไป
+                                            บทที่ 5 <i class="fas fa-arrow-right"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+
+    </div>
+    </div>
+</body>
+
+</html>

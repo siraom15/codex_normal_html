@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="assets/pic/codex.png" type="image/x-icon">
+    <title>The Code X</title>
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/loader.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="stylesheet" href="assets/css/backtotop.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/reqhtml.js"></script>
+    <script src="assets/js/backtotop.js"></script>
+
+    <script>
+        function myFunction() {
+            myVar = setTimeout(showPage, 1000);
+        }
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("main").style.display = "block";
+
+        }
+        $(document).ready(() => {
+            $("#menu-toggle").click(function (e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+            reqHTML();
+        });
+
+    </script>
+    <style>
+        p {
+            font-size: 18px;
+        }
+
+        code {
+            font-size: 19px;
+        }
+        .udl{
+            text-decoration: underline;
+        }
+        .menu-toggle{
+            position: fixed;
+        }
+    </style>
+</head>
+
+<body class="bg-light  kanit text-white" onload="myFunction()">
+    <div id="loader"></div>
+    <div class="main" id="main" style="display:none;">
+        <div id="wrapper">
+            <!-- Sidebar -->
+            <div include-html="sidebar-warper.htm"></div>
+            <!-- /#sidebar-wrapper -->
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <a href="#menu-toggle" class="btn btn-outline-dark btn-sm" id="menu-toggle">แสดง/ซ่อน เมนู</a>
+                <button  id="myBtn" onclick="topFunction()" ><i class="fas fa-arrow-up"></i></button>
+                <hr>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12 col-md-12 text-dark">
+                            <div id="basic">
+                                <h1 class="text-center">พื้นฐาน HTML</h1>
+                                <p>เอกสาร HTML ทั้งหมดจะต้องเริ่มต้นด้วยการประกาศประเภทเอกสาร:
+                                    <code>&lt;!DOCTYPE html&gt;</code></p>
+                                <p>เอกสาร HTML นั้นเริ่มต้นด้วย <code>&lt;html&gt;</code> และลงท้ายด้วย
+                                    <code>&lt;/html&gt;</code> </p>
+                                <p>ส่วนที่มองเห็นได้ของเอกสาร HTML อยู่ระหว่าง <code>&lt;body&gt;</code> และ
+                                    <code>&lt;/body&gt;</code></p>
+                                <p style="text-decoration: underline;">ตัวอย่างตาม Code ด่านล่าง</p>
+                                <div class="example-code">
+                                    <div class="bg-light shadow-lg rounded">
+                                        <div class="margin-2">
+                                            <span class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>!DOCTYPE<span
+                                                    class="attributecolor" style="color:red"> html</span><span
+                                                    class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span><br><span
+                                                class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>html<span class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span><br><span
+                                                class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>body<span class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span><br><br><span
+                                                class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>h1<span class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span>My First
+                                            Heading<span class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>/h1<span class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span><br><span
+                                                class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>p<span class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span>My first
+                                            paragraph.<span class="" style="color:brown"><span
+                                                    class="" style="color:rgb(35, 11, 80)">&lt;</span>/p<span
+                                                    class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span><br><br><span
+                                                class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>/body<span class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span><br><span
+                                                class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>/html<span class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><br>
+                            <hr>
+                            <div id="heading">
+                                <h1 class="text-center">ส่วนหัวของ HTML (HTML Headings)</h1>
+                                <p>ส่วนหัว HTML ถูกกำหนดด้วยแท็ก <code>&lt;h1&gt;</code> ถึง <code>&lt;h6&gt;</code>
+                                </p>
+                                <p>โดยที่ <code>&lt;h1&gt;</code> กำหนดหัวเรื่องที่สำคัญที่สุด <code>&lt;h6&gt;</code>
+                                    กำหนดหัวเรื่องที่สำคัญน้อยที่สุด</p>
+                                <p style="text-decoration: underline;">ตัวอย่างตาม Code ด่านล่าง</p>
+                                <div class="example-code">
+                                    <div class="bg-light shadow-lg rounded ">
+                                        <div class="margin-2"><br>
+                                            <span class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>h1<span class=""
+                                                    style="color:rgb(26, 83, 52)">&gt;</span></span>This is heading
+                                            1<span class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>/h1<span class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span><br>
+                                            <span class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>h2<span class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span>This is heading
+                                            2<span class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>/h2<span class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span><br>
+                                            <span class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>h3<span class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span>This is heading
+                                            3<span class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>/h3<span class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span><br><br>
+                                        </div>
+                                    </div>
+                                    <a href="./playground/headding.htm" target="_blank"
+                                        class="btn btn-success btn-block ">ลองเลย !</a>
+                                </div>
+
+                            </div><br>
+                            <hr>
+                            <div class="para" id="para">
+                                <h1 class="text-center">ย่อหน้าของ HTML (HTML Paragraphs)</h1>
+                                <p>ย่อหน้า HTML ถูกกำหนดด้วยแท็ก : <code>&lt;p&gt;</code></p>
+                                <p style="text-decoration: underline;">ตัวอย่างตาม Code ด่านล่าง</p>
+                                <div class="example-code">
+                                    <div class="bg-light shadow-lg rounded">
+                                        <div class="margin-2"><br>
+                                            <span class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>!DOCTYPE<span
+                                                    class="attributecolor" style="color:red"> html</span><span
+                                                    class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span><br><span
+                                                class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>html<span class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span><br><span
+                                                class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>body<span class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span><br><br><span
+                                                class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>p<span class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span>This is a
+                                            paragraph.<span class="" style="color:brown"><span
+                                                    class="" style="color:rgb(35, 11, 80)">&lt;</span>/p<span
+                                                    class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span><br><span
+                                                class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>p<span class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span>This is another
+                                            paragraph.<span class="" style="color:brown"><span
+                                                    class="" style="color:rgb(35, 11, 80)">&lt;</span>/p<span
+                                                    class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span><br><br><span
+                                                class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>/body<span class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span><br><span
+                                                class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>/html<span class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span>
+                                        </div>
+
+                                    </div>
+                                    <a href="./playground/paragraph.htm" target="_blank"
+                                        class="btn btn-success btn-block ">ลองเลย !</a>
+                                </div>
+
+                            </div><br>
+                            <hr>
+                            <div class="link" id="link">
+                                <h1 class="text-center">ลิ้งค์ HTML (Links HTML)</h1>
+                                <p>ลิงค์ HTML ถูกกำหนดด้วยแท็ก : <code>&lt;a&gt;</code></p>
+                                <p>ปลายทางของลิงค์ถูกระบุในแอตทริบิวต์ <code>href</code> </p>
+                                <p>เช่น ต้องการให้ลิ้งค์ไปสู่ website google.com สามารถเขียนได้เป็น
+                                    <code>&lt;a href="https://www.google.com/"&gt;</code> </p>
+                                <p style="text-decoration: underline;">ตัวอย่างตาม Code ด่านล่าง</p>
+                                <div class="example-code">
+                                    <div class="bg-light shadow-lg rounded">
+                                        <div class="margin-2"><br>
+                                            <span class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>!DOCTYPE<span
+                                                    class="attributecolor" style="color:red"> html</span><span
+                                                    class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span><br><span
+                                                class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>html<span class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span><br><span
+                                                class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>body<span class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span><br><br><span
+                                                class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>a <span class="text-primary">href</span>="#" <span
+                                                    class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span>This is a
+                                            link.<span class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>/a<span class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span><br><br><span
+                                                class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>/body<span class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span><br><span
+                                                class="" style="color:brown"><span class=""
+                                                    style="color:rgb(35, 11, 80)">&lt;</span>/html<span class=""
+                                                    style="color:rgb(35, 11, 80)">&gt;</span></span>
+                                        </div>
+
+                                    </div>
+                                    <a href="./playground/link.htm" target="_blank"
+                                        class="btn btn-success btn-block ">ลองเลย !</a>
+                                </div>
+
+                            </div><br><hr>
+                            <div class="img" id="img">
+                                    <h1 class="text-center">แทรกรูปภาพใน HTML (HTML Image)</h1>
+                                    <p>การแทรกรูปภาพ HTML ถูกกำหนดด้วยแท็ก : <code>&lt;img&gt;</code></p>
+                                    <p>ไฟล์ต้นฉบับของรูปภาพ( <code>src=""</code>), ข้อความอธิบาย ( <code>alt</code> ),การระบุคุณลักษณะสามารถใช้ <code>width</code> ระบุความกว้าง และ <code>height </code>ระบุความสูง </p>
+                                    <p style="text-decoration: underline;">ตัวอย่างตาม Code ด่านล่าง</p>
+                                    <div class="example-code">
+                                        <div class="bg-light shadow-lg rounded">
+                                            <div class="margin-2"><br>
+                                                <span class="" style="color:brown"><span class=""
+                                                        style="color:rgb(35, 11, 80)">&lt;</span>!DOCTYPE<span
+                                                        class="attributecolor" style="color:red"> html</span><span
+                                                        class=""
+                                                        style="color:rgb(35, 11, 80)">&gt;</span></span><br><span
+                                                    class="" style="color:brown"><span class=""
+                                                        style="color:rgb(35, 11, 80)">&lt;</span>html<span class=""
+                                                        style="color:rgb(35, 11, 80)">&gt;</span></span><br><span
+                                                    class="" style="color:brown"><span class=""
+                                                        style="color:rgb(35, 11, 80)">&lt;</span>body<span class=""
+                                                        style="color:rgb(35, 11, 80)">&gt;</span></span><br><br><span
+                                                    class="" style="color:brown"><span class=""
+                                                        style="color:rgb(35, 11, 80)">&lt;</span>img <span class="text-success">src</span>="<span class="text-danger udl">assets/pic/codex.png</span>" <span class="text-success">alt</span>="<span class="text-danger">the code X</span>"
+                                                        <span class="text-success ">width</span>="<span class="text-danger">100</span>" <span class="text-success">height</span>="<span class="text-danger">100</span>"<span
+                                                        class=""
+                                                        style="color:rgb(35, 11, 80)">&gt;</span><br><br><span
+                                                    class="" style="color:brown"><span class=""
+                                                        style="color:rgb(35, 11, 80)">&lt;</span>/body<span class=""
+                                                        style="color:rgb(35, 11, 80)">&gt;</span></span><br><span
+                                                    class="" style="color:brown"><span class=""
+                                                        style="color:rgb(35, 11, 80)">&lt;</span>/html<span class=""
+                                                        style="color:rgb(35, 11, 80)">&gt;</span></span>
+                                            </div>
+    
+                                        </div>
+                                        <a href="./playground/img.htm" target="_blank"
+                                            class="btn btn-success btn-block ">ลองเลย !</a>
+                                    </div>
+    
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+
+    </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="localhost/assets/pic/codex.png" type="image/x-icon">
+    <title>The Code X</title>
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <link rel="stylesheet" href="http://codex.sukhon.ac.th/assets/css/style.css">
+    <link rel="stylesheet" href="http://codex.sukhon.ac.th/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://codex.sukhon.ac.th/assets/css/loader.css">
+    <link rel="stylesheet" href="http://codex.sukhon.ac.th/assets/css/sidebar.css">
+    <link rel="stylesheet" href="http://codex.sukhon.ac.th/assets/css/backtotop.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="http://codex.sukhon.ac.th/assets/js/reqhtml.js"></script>
+    <script src="http://codex.sukhon.ac.th/assets/js/backtotop.js"></script>
+
+    <script>
+        function myFunction() {
+            myVar = setTimeout(showPage, 1000);
+        }
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("main").style.display = "block";
+
+        }
+        $(document).ready(() => {
+            $("#menu-toggle").click(function (e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+            reqHTML();
+            $('#what-is-layer').click(function () {
+                $('#myModal').modal('show');
+            });
+        });
+
+    </script>
+    <style>
+        p {
+            font-size: 18px;
+        }
+
+        code {
+            font-size: 19px;
+        }
+
+        .udl {
+            text-decoration: underline;
+        }
+
+        .menu-toggle {
+            position: fixed;
+        }
+    </style>
+</head>
+
+<body class="bg-white kanit" onload="myFunction()">
+    <div id="loader"></div>
+    <div class="main" id="main" style="display:none;">
+        <div id="wrapper">
+            <!-- Sidebar -->
+            <div include-html="sidebar-warper.htm"></div>
+            <!-- /#sidebar-wrapper -->
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <a href="#menu-toggle" class="btn btn-outline-dark btn-sm" id="menu-toggle">แสดง/ซ่อน เมนู</a>
+                <button id="myBtn" onclick="topFunction()"><i class="fas fa-arrow-up"></i></button>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12 col-md-12 text-dark">
+                            <br>
+                            <br>
+                            <div class="link">
+                                <h1 class="text-center">การกำหนดรูปแบบเว็บไซต์ใน HTML ( HTML Layout )</h1>
+                                <hr>
+                                <div id="example-layout">
+                                    <h5>ตัวอย่างการจัดหน้าเว็บไซต์</h5>
+                                    <div class="card rounded shadow-lg">
+                                        <div class="card-body">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr><br>
+                                <div class="card shadow-lg rounded bg-white">
+                                    <div class="card-body">
+                                        <h4 class="udl">องค์ประกอบของเค้าโครง HTML</h4>
+                                        <p>เว็บไซต์มักจะแสดงเนื้อหาในหลายคอลัมน์ (เหมือน นิตยสารหรือหนังสือพิมพ์)</p>
+                                        <p>ใน HTML5 มี element ที่มีความหมาย กำหนดส่วนต่าง ๆ ของหน้าเว็บ เช่น </p>
+                                        <div class="row">
+                                            <div class="col-lg-2 col-sm-12">
+                                                <img src="http://codex.sukhon.ac.th/assets/pic/layout.png" alt="" srcset=""
+                                                    class="center">
+                                            </div>
+                                            <div class="col">
+                                                <ul>
+                                                    <li>&lt;header&gt; - กำหนดส่วนหัวสำหรับเอกสาร หรือส่วนของเอกสาร</li>
+                                                    <li>&lt;nav&gt; - กำหนด <a
+                                                            href="http://codex.sukhon.ac.th/lesson/link/"
+                                                            target="_blank">ลิ้งค์</a> การนำทาง</li>
+                                                    <li>&lt;section&gt; - ใช้ mark up เนื้อหาที่ต้องการแยกออกมาเป็นส่วนๆ
+                                                        เช่น การแบ่งบทความออกเป็น chapter </li>
+                                                    <li>&lt;article&gt - ใช้ mark up สิ่งที่มีความหมายในตัวของมันเอง
+                                                        เช่น ข่าว บทความ เป็นต้น</li>
+                                                    <li>&lt;aside&gt;- จะใช้ mark up
+                                                        ส่วนที่มีความเกี่ยวข้องกับเนื้อหาหลัก แต่ไม่มากนัก
+                                                        จนสามารถแยกออกมาจากเนื้อหาหลักหรือตัดออกได้</li>
+                                                    <li>&lt;footer&gt; - กำหนดส่วนท้ายสำหรับเอกสารหรือส่วนของเอกสาร</li>
+                                                    <li>&lt;details&gt; -กำหนดรายละเอียดเพิ่มเติม</li>
+                                                    <li>&lt;details&gt; กำหนดหัวเรื่องสำหรับองค์ประกอบ &lt;details&gt;
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br><br>
+                                <div class="card shadow-lg rounded bg-white">
+                                    <div class="card-body">
+                                        <h5>เทคนิคการจัดวางหน้าเว็บ</h5>
+                                        <p>มี 5 วิธีในการสร้างเค้าโครงหลายคอลัมน์ แต่ละวิธีมีข้อดีข้อเสีย :</p>
+                                        <ul>
+                                            <li>HTML tables (ไม่แนะนำ)</li>
+                                            <li>CSS float property</li>
+                                            <li>CSS flexbox</li>
+                                            <li>CSS framework</li>
+                                            <li>CSS grid</li>
+                                        </ul>
+                                        <h4>เลือกแบบไหนดีนะ ?</h4>
+                                        <hr>
+                                        <div id="table">
+                                            <h5>- ตาราง (HTML tables)</h5>
+                                            <p>องค์ประกอบ <code>&lt;table&gt;</code>
+                                                ไม่ได้ถูกออกแบบมาให้เป็นเครื่องมือในการจัดวาง</p>
+                                            <p>วัตถุประสงค์ขององค์ประกอบ <code>&lt;table&gt;</code>
+                                                คือการแสดงข้อมูลแบบตาราง</p>
+                                            <p>ดังนั้นอย่าใช้ตารางสำหรับเค้าโครงหน้าของคุณ!</p>
+                                            <div class="alert alert-danger" role="alert">
+                                                เคล็ดลับ: อย่าใช้ตารางสำหรับเค้าโครงหน้าของคุณ!
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div id="css-fr">
+                                            <h5>- CSS Framework</h5>
+                                            <p>หากคุณต้องการสร้างเลย์เอาต์ของคุณอย่างรวดเร็วคุณสามารถใช้เฟรมเวิร์กเช่น
+                                                <a href="https://getbootstrap.com/">Bootstrap</a> หรือ <a
+                                                    href="https://semantic-ui.com/">Semantic ui</a></p>
+
+                                            <img src="http://codex.sukhon.ac.th/assets/pic/demo-bootstrap.jpg" alt=""
+                                                srcset="" width="50%">
+                                            <img src="http://codex.sukhon.ac.th/assets/pic/demo-semantic.jpg" alt=""
+                                                srcset="" width="50%">
+                                        </div>
+                                        <hr>
+                                        <div id="CSS-Fl">
+                                            <h5>CSS Floats</h5>
+                                            <p>เป็นเรื่องปกติที่จะทำทั้งโครงร่างเว็บโดยใช้คุณสมบัติของ CSS float
+                                                เพราะง่ายต่อการเรียนรู้</p>
+                                            <p>คุณต้องจำไว้ว่าคุณสมบัติของ Floats นั้นทำงานอย่างไร</p>
+                                            <div class="alert alert-danger" role="alert">
+                                                ข้อเสีย: องค์ประกอบ Float จะเชื่อมโยงกับผังเอกสาร
+                                                ซึ่งอาจมีผลต่อความยืดหยุ่นของเว็บไซต์
+                                            </div>
+                                            สามารถศึกษาเรื่อง CSS Floats ได้ <a
+                                                href="https://rabbitinblack.com/2011/06/css-float/"
+                                                target="_blank">ที่นี่</a>
+                                        </div>
+                                        <hr>
+                                        <div id="css-flex">
+                                            <h4>CSS Flexbox</h4>
+                                            <p>Flexbox เป็น <span id="what-is-layer"
+                                                    class="text-primary udl">Layer</span> ใหม่ใน <a
+                                                    href="https://sites.google.com/site/atcharapan2559/bth-thi-3-css3-khux-xari"
+                                                    target="_blank">CSS3</a></p>
+                                            <p>การใช้ flexbox ช่วยให้มั่นใจได้ว่าองค์ประกอบต่างๆจะทำงานได้อย่างที่คาดการณ์ไว้</p>
+                                            <p>เมื่อเค้าโครงหน้าต้องรองรับขนาดหน้าจอที่แตกต่างกันและอุปกรณ์แสดงผลที่แตกต่างกัน</p>
+                                            <div class="alert alert-danger" role="alert">
+                                                    ข้อเสีย: ไม่ทำงานใน IE10 และรุ่นก่อนหน้า
+                                                </div>
+                                        </div>
+                                        <hr>
+                                        <div id="grid">
+                                            <h4>CSS Grid View</h4>
+                                            <p>CSS Grid Layout Module นำเสนอระบบโครงร่างแบบกริดที่มีแถวและคอลัมน์</p>
+                                            <p>ทำให้การออกแบบหน้าเว็บง่ายขึ้นโดยไม่ต้องใช้ Floats และการวางตำแหน่ง</p>
+                                            <div class="alert alert-danger" role="alert">
+                                                    ข้อเสีย: ไม่ทำงานใน IE หรือ Edge 15 และรุ่นก่อนหน้า
+                                                </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <br><br>
+                                <div class="row">
+                                    <div class="col"><a href="./link/" class="btn btn-primary btn-block "><i
+                                                class="fas fa-arrow-left"></i> บทก่อนหน้า บทที่ 4 </a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+
+    </div>
+    <!-- modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Layer คืออะไร ?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    layer คือ ชั้น ของการซ้อนทับกันของภาพเป็นชั้นๆ <br> layer นั้นเปรียบเสมือนเเผ่นใส่
+                    ที่เมื่อเรานำมาวางทับกัน <br> ก็จะสามารถมองเห็น <br>
+                    ภาพที่เกิดจากการซ้อนกันของแผ่นใสได้เหมือนเป็นภาพเดียว <br>
+                    Layer กืคือสิ่งที่ใช้บรรจุ ออปเจ็ค เช่นภาพ , ตัวหนังสือ ฯลฯ <br> Layer สามารถบรรจุออปเจ็กต่างๆ ได้
+                    เช่น
+                    ภาพ ,ตัวอักษร ฯลฯ <br> คุณสามารถวางมันลงบนเอกสาร HTML และคุณสามารถเคลื่อนมันไปรอบๆ
+                    ถ้าคุณทำการเคลื่อน
+                    Layer <br> นั่นหมายความว่าออปเจ็กที่อยู่ใน Layer ได้เคลื่อนตามไปด้วย
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">ปิด</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

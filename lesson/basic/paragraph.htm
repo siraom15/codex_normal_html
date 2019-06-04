@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="http://codex.sukhon.ac.th/assets/pic/codex.png" type="image/x-icon">
+    <title>HTML paragraph</title>
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <link rel="stylesheet" href="http://codex.sukhon.ac.th/assets/css/style.css">
+    <link rel="stylesheet" href="http://codex.sukhon.ac.th/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://codex.sukhon.ac.th/assets/css/loader.css">
+    <link rel="stylesheet" href="http://codex.sukhon.ac.th/assets/css/sidebar.css">
+    <link rel="stylesheet" href="http://codex.sukhon.ac.th/assets/css/backtotop.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="http://codex.sukhon.ac.th/assets/js/reqhtml.js"></script>
+    <script src="http://codex.sukhon.ac.th/assets/js/backtotop.js"></script>
+
+    <script>
+        function myFunction() {
+            myVar = setTimeout(showPage, 1000);
+        }
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("main").style.display = "block";
+
+        }
+        $(document).ready(() => {
+            $("#menu-toggle").click(function (e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+            reqHTML();
+        });
+
+    </script>
+    <style>
+        p {
+            font-size: 18px;
+        }
+
+        code {
+            font-size: 19px;
+        }
+
+        .udl {
+            text-decoration: underline;
+        }
+
+        .menu-toggle {
+            position: fixed;
+        }
+    </style>
+</head>
+
+<body class="bg-light  kanit text-white" onload="myFunction()">
+    <div id="loader"></div>
+    <div class="main" id="main" style="display:none;">
+        <div id="wrapper">
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper" class="text-center shadow-lg">
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand text-light">
+                        <a href="http://codex.sukhon.ac.th/">
+                            <i class="fas fa-code"></i> The Code X
+                        </a>
+                    </li>
+                    <li class="bg-danger">
+                        <a href="../basic/" class="text-white">บทที่ 1 ความรู้พื้นฐาน</a>
+                    <li class="text-dark">
+                        <a href="./index.htm">- HTML คืออะไร</a>
+                    </li>
+                    <li class="text-dark">
+                        <a href="./structure.htm">- โครงสร้างภาษา HTML</a>
+                    </li>
+                    <li class="text-dark">
+                        <a href="./heading.htm">- Heading</a>
+                    </li>
+                    <li class="text-dark">
+                        <a href="./paragraph.htm" class="text-white bg-warning">- Paragraph</a>
+                    </li>
+                    <li class="text-dark">
+                        <a href="./list.htm">- List</a>
+                    </li>
+                    </li>
+                    <li>
+                        <a href="../style/">บทที่ 2 การกำหนดรูปแบบตัวอักษร</a>
+                    </li>
+                    <li>
+                        <a href="../image/">บทที่ 3 การแทรกรูปภาพ</a>
+                    </li>
+                    <li>
+                        <a href="../link/">บทที่ 4 การเชื่อมโยง</a>
+                    </li>
+                    <li>
+                        <a href="../layout/">บทที่ 5 การกำหนดรูปแบบเว็บไซต์</a>
+                    </li>
+                    <li>
+                        <a href="http://codex.sukhon.ac.th/playground/">PlayGround</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /#sidebar-wrapper -->
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <a href="#menu-toggle" class="btn btn-outline-dark btn-sm" id="menu-toggle">แสดง/ซ่อน เมนู</a>
+                <button id="myBtn" onclick="topFunction()"><i class="fas fa-arrow-up"></i></button>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12 col-md-12 text-dark">
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <div class="col">
+                                    <div class="text-center text-dark">ขณะนี้คุณเรียนบทที่ 1 ไปแล้ว :</div>
+                                    <div class="progress bg-dark">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-purple"
+                                            role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                                            style="width: 80%">80%</div>
+                                    </div>
+                                </div>
+                                <div class="col-2"></div>
+                            </div>
+                            <br>
+                            <div class="para" id="para">
+
+                                <h1 class="text-center">ย่อหน้าของ HTML (HTML Paragraphs)</h1>
+                                <div class="card shadow-lg rounded">
+                                    <div class="card-body">
+                                        <p>ย่อหน้า HTML ถูกกำหนดด้วยแท็ก : <code>&lt;p&gt;</code></p>
+                                        <p style="text-decoration: underline;">ตัวอย่างตาม Code ด่านล่าง</p>
+                                        <div id="example-show">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                            <p> paragraph.</p>
+                                                            <p>This is another paragraph.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            Code :
+                                        <div class="example-code">
+                                            <div class="bg-light shadow-lg rounded card">
+                                                <div class="margin-2">
+                                                    <span style="color:brown"><span
+                                                            style="color:rgb(35, 11, 80)">&lt;</span>!DOCTYPE<span
+                                                            style="color:red"> html</span><span
+                                                            style="color:rgb(35, 11, 80)">&gt;</span></span><br><span
+                                                        style="color:brown"><span
+                                                            style="color:rgb(35, 11, 80)">&lt;</span>html<span
+                                                            style="color:rgb(35, 11, 80)">&gt;</span></span><br><span
+                                                        style="color:brown"><span
+                                                            style="color:rgb(35, 11, 80)">&lt;</span>body<span
+                                                            style="color:rgb(35, 11, 80)">&gt;</span></span><br><br><span
+                                                        style="color:brown"><span
+                                                            style="color:rgb(35, 11, 80)">&lt;</span>p<span
+                                                            style="color:rgb(35, 11, 80)">&gt;</span></span>
+                                                    paragraph.<span style="color:brown"><span
+                                                            style="color:rgb(35, 11, 80)">&lt;</span>/p<span
+                                                            style="color:rgb(35, 11, 80)">&gt;</span></span><br><span
+                                                        style="color:brown"><span
+                                                            style="color:rgb(35, 11, 80)">&lt;</span>p<span
+                                                            style="color:rgb(35, 11, 80)">&gt;</span></span>This is
+                                                    another
+                                                    paragraph.<span style="color:brown"><span
+                                                            style="color:rgb(35, 11, 80)">&lt;</span>/p<span
+                                                            style="color:rgb(35, 11, 80)">&gt;</span></span><br><br><span
+                                                        style="color:brown"><span
+                                                            style="color:rgb(35, 11, 80)">&lt;</span>/body<span
+                                                            style="color:rgb(35, 11, 80)">&gt;</span></span><br><span
+                                                        style="color:brown"><span
+                                                            style="color:rgb(35, 11, 80)">&lt;</span>/html<span
+                                                            style="color:rgb(35, 11, 80)">&gt;</span></span>
+                                                </div>
+
+                                            </div>
+                                            <a href="http://codex.sukhon.ac.th/playground/paragraph.htm" target="_blank"
+                                                class="btn btn-warning btn-block text-white">ลองเขียนด้วยตนเอง !</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="card shadow-lg rounded">
+                                    <div class="card-body">
+                                        <p style="text-decoration: underline;">ตัวแบ่งบรรทัด HTML</p>
+                                        <p>ใช้ <code>&lt;br&gt;</code> หากคุณต้องการให้ตัวแบ่งบรรทัด (บรรทัดใหม่)
+                                            โดยไม่ต้องเริ่มย่อหน้าใหม่ ตัวอย่างเช่น:</p>
+                                        <div id="example-show">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <p>นี้คือ<br>ย่อหน้า<br>ที่ใช้ตัวแบ่งบรรทัด</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>Code :
+                                        <div class="example-code">
+                                            <div class="bg-light shadow-lg rounded card">
+                                                <div class="margin-2">
+                                                    <span class="tagnamecolor" style="color:brown"><span
+                                                            class="tagcolor" style="color:mediumblue">&lt;</span>p<span
+                                                            class="tagcolor"
+                                                            style="color:mediumblue">&gt;</span></span>นี้คือ<span
+                                                        class="tagnamecolor" style="color:brown"><span class="tagcolor"
+                                                            style="color:mediumblue">&lt;</span>br<span class="tagcolor"
+                                                            style="color:mediumblue">&gt;</span></span>ย่อหน้า<span
+                                                        class="tagnamecolor" style="color:brown"><span class="tagcolor"
+                                                            style="color:mediumblue">&lt;</span>br<span class="tagcolor"
+                                                            style="color:mediumblue">&gt;</span></span>ที่ใช้ตัวแบ่งบรรทัด<span
+                                                        class="tagnamecolor" style="color:brown"><span class="tagcolor"
+                                                            style="color:mediumblue">&lt;</span>/p<span class="tagcolor"
+                                                            style="color:mediumblue">&gt;</span></span>
+                                                </div>
+
+                                            </div>
+                                            <a href="http://codex.sukhon.ac.th/playground/paragraph-br.htm" target="_blank"
+                                                class="btn btn-warning btn-block text-white">ลองเขียนด้วยตนเอง !</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col"><a href="./heading.htm" class="btn btn-primary btn-block "><i
+                                            class="fas fa-arrow-left"></i> เนื้อหาก่อนหน้า </a></div>
+                                <div class="col"><a href="./list.htm" class="btn btn-success btn-block ">เนื้อหาต่อไป <i
+                                            class="fas fa-arrow-right"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+
+    </div>
+    </div>
+</body>
+
+</html>

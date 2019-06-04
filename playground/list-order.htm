@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/pic/favicon.jpg" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Code X Playground</title>
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/loader.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="stylesheet" href="../assets/addon/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="../assets/addon/codemirror/theme/lucario.css">
+    <link rel="stylesheet" href="../assets/addon/codemirror/addon/hint/show-hint.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/addon/codemirror/lib/codemirror.js"></script>
+    <script src="../assets/addon/codemirror/mode/css/css.js"></script>
+    <script src="../assets/addon/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="../assets/addon/codemirror/mode/xml/xml.js"></script>
+    <script src="../assets/addon/codemirror/addon/hint/show-hint.js"></script>
+    <script src="../assets/addon/codemirror/addon/hint/css-hint.js"></script>
+    <script src="../assets/addon/codemirror/addon/hint/html-hint.js"></script>
+    <script src="../assets/addon/codemirror/mode/emmet/emmet.js"></script>
+    <style>
+        code {
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body class="kanit text-white">
+
+    <div class="container-fluid" id="main">
+        <br>
+        <nav
+            class="navbar navbar-expand-lg navbar-expand-sm navbar-expand-md navbar-light bg-light shadow-lg text-warning">
+            <a class="navbar-brand text-warning" href="#">Play Ground </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../index.htm">หน้าแรก</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link" id="how-to">วิธีใช้ ?</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="form-inline my-2 my-lg-0">
+                <button class="btn text-white btn-warning my-2 my-sm-0" id="compile">ประมวลผล Code </button>
+            </div>
+        </nav><br>
+        <div class="row rounded shadow-lg" style="margin-left: 0px; margin-right: 0px;">
+            <div class=" rounded col-lg-6 col-sm-12 col-md-12 editor-color shadow-lg"
+                style="padding-right: 0px; padding-left: 0px;">
+                <textarea name="" id="editor" class="editor">
+<!DOCTYPE html>
+<html>
+    <body>
+        <ol>
+            <li>กาแฟ</li>
+            <li>ชาไทย</li>
+            <li>นม</li>
+        </ol>
+    </body>
+</html>
+</textarea>
+            </div>
+            <!-- <div class="col"></div> -->
+            <div class=" rounded  col-lg-6 col-sm-12 col-md-12 bg-white shadow-lg"
+                style="padding-right: 0px; padding-left: 0px;">
+                <iframe id="preview" src(unknow) frameborder="0" style="width:100%" class="preview"></iframe>
+            </div>
+        </div>
+        <!-- modal -->
+        <div class="modal fade text-dark" id="myModal" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalScrollableTitle">วิธีใช้</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>- ท่านสามารถใช้ Tab ในการช่วยพิมพ์ได้ </p>
+                        <p>เช่นต้องการพิมพ์ <code>&lt;a href=""&gt;&lt;/a&gt;</code> ท่านสามารถพิมพ์ a แล้วกด Tab </p>
+                        <hr>
+                        <p>- มีระบบ Auto Complete โดยการกดปุ่ม <b>Ctrl</b> พร้อมกับ <b>Spacebar</b></p>
+                        <hr>
+                        <div class="p">เมื่อท่านต้องการประมวลผล Code กดปุ่ม <div
+                                class="btn btn-warning btn-sm text-white disable">ประมวลผล Code</div> มุมบนขวา</div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">เข้าใจแล้ว !!!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        $(document).ready(() => {
+            $("#how-to").click(() => {
+                $('#myModal').modal('show');
+            });
+            $(window).on('load', () => {
+                compile();
+                $('#myModal').modal('show');
+            });
+            let code = $("#editor")[0];
+            let editor = CodeMirror.fromTextArea(code, {
+                value: '&lt;html&gt;',
+                lineNumbers: true,
+                mode: 'htmlmixed',
+                theme: "lucario",
+                lineWrapping: true,
+                indentWithTabs: true,
+                extraKeys: { "Ctrl-Space": "autocomplete" }
+            });
+            $(".help").click(() => {
+                $('#myModal').modal('show');
+            })
+            emmetCodeMirror(editor);
+            function compile() {
+                var iframe = document.getElementById('preview');
+                iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument) ? iframe.contentDocument.document : iframe.contentDocument;
+                iframe.document.open();
+                iframe.document.write(editor.getValue());
+                iframe.document.close();
+                console.log(editor.getValue());
+
+                return false;
+            };
+            $('#compile').click(function () {
+                compile();
+            });
+        });
+    </script>
+    <script>
+        $().ready(() => {
+            var set_display_height = function () {
+                var display_height = $(window).height() - 52;
+                $('#editor').height(display_height);
+                //$('.CodeMirror').height(display_height);
+                $('.preview').height(display_height);
+            };
+            $(window).resize(function () {
+                set_display_height();
+            });
+
+            set_display_height();
+        });
+    </script>
+</body>
+
+</html>

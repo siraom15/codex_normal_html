@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="assets/pic/codex.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Code X</title>
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/loader.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- <script src="assets/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/reqhtml.js"></script>
+    <style>
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body class="bg-white  kanit text-dark" onload="myFunction()">
+    <div id="loader"></div>
+    <div class="main" id="main" style="display:none;">
+        <div id="wrapper">
+            <!-- Sidebar -->
+            <div include-html="sidebar-warper.htm" class="shadow-lg"></div>
+            <!-- /#sidebar-wrapper -->
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <a href="#menu-toggle" class="btn btn-outline-dark btn-sm " id="menu-toggle">แสดง/ซ่อน เมนู</a>
+                <br>
+                <div class="container">
+                    <div class="display-2 text-center ">Code X</div><br>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card shadow-lg rounded">
+                                <div class="card-header">
+                                    แนะนำ
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Code X คืออะไร ?</h5>
+                                    <hr>
+                                    <p class="card-text">Codex คือ Website ที่เกี่ยวกับการศึกษา HTML/CSS ต่างๆ</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><br>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card shadow-lg rounded">
+                                <div class="card-header">
+                                    บทเรียน HTML
+                                </div>
+                                <div class="card-body">
+                                    <div class="list-group">
+                                        <div href="#" class="list-group-item list-group-item-action active disable">
+                                          บทที่ 1 : ความรู้พื้นฐาน HTML5
+                                        </div>
+                                        <a href="./lesson/basic/index.htm" class="list-group-item list-group-item-action">- รู้จักกับภาษา HTML5
+                                            และความสามารถเด่นๆ</a>
+                                        <a href="./lesson/basic/structure.htm" class="list-group-item list-group-item-action">- โครงสร้างภาษา
+                                            HTML5</a>
+                                        <a href="./lesson/basic/heading.htm" class="list-group-item list-group-item-action">- คำสั่งพื้นฐาน ->
+                                            Heading </a>
+                                        <a href="./lesson/basic/paragraph.htm" class="list-group-item list-group-item-action">- คำสั่งพื้นฐาน ->
+                                            Paragraph</a>
+                                        <a href="./lesson/basic/list.htm" class="list-group-item list-group-item-action">- คำสั่งพื้นฐาน ->
+                                            List</a>
+                                    </div><br>
+                                    <div class="list-group">
+                                        <div href="#" class="list-group-item list-group-item-action active disable">
+                                            บทที่ 2 : การกำหนดรูปแบบตัวอักษร (Styles and Formatting)
+                                        </div>
+                                        <a href="#" class="list-group-item list-group-item-action">-
+                                            การใส่สีพื้นหลังตัวอักษร</a>
+                                        <a href="#" class="list-group-item list-group-item-action">-
+                                            การใส่สีตัวอักษร</a>
+                                        <a href="#" class="list-group-item list-group-item-action">- ขนาดตัวอักษร</a>
+                                        <a href="#" class="list-group-item list-group-item-action">-
+                                            การจัดตำแหน่งข้อความ</a>
+                                        <a href="#" class="list-group-item list-group-item-action">-
+                                            การใส่รูปแบบตัวอักษร Heading Paragraph และ List</a>
+                                    </div><br>
+                                    <div class="list-group">
+                                        <div href="#" class="list-group-item list-group-item-action active disable">
+                                           บทที่ 3 : การแทรกรูปภาพ (Images)
+                                        </div>
+                                        <a href="./lesson/image/index.htm" class="list-group-item list-group-item-action">-
+                                            เรียนรู้การแทรกรูปภาพ</a>
+                                    </div><br>
+                                    <div class="list-group">
+                                        <div href="#" class="list-group-item list-group-item-action active disable">
+                                            บทที่ 4 :การเชื่อมโยง (Links)
+                                        </div>
+                                        <a href="./lesson/link/index.htm#Local" class="list-group-item list-group-item-action">-
+                                            เชื่อมโยงภายในเว็บไซต์ (Local Link)</a>
+                                        <a href="./lesson/link/index.htm#Extra" class="list-group-item list-group-item-action">-
+                                            เชื่อมโยงภายนอกเว็บไซต์ (External Link)</a>
+                                    </div><br>
+                                    <div class="list-group">
+                                        <div href="#" class="list-group-item list-group-item-action active disable">
+                                           บทที่ 5 : การกำหนดรูปแบบเว็บไซต์ (Layout)
+                                        </div>
+                                        <a href="#" class="list-group-item list-group-item-action">-
+                                            เรียนรู้การกำหนดรูปแบบเว็บไซต์</a>
+                                        
+                                    </div>
+                                    <!-- <h5 class="card-title">HTML คืออะไร ?</h5>
+                                    <p class="card-text">HTML ย่อมาจาก Hyper Text Markup Language
+                                        คือภาษาคอมพิวเตอร์...</p>
+                                    <a href="whatishtml.htm" class="btn btn-success">เริ่มเรียนกันเลย !!!</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card shadow-lg rounded">
+                                <div class="card-header">
+                                    ทดลองเขียน Code
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">สนามเด็กเล่น ของ HTML</h5>
+                                    <p class="card-text">ใช้สำหรับการทดลองเขียน Code ต่างๆ เช่น HTML/CSS </p>
+                                    <a href="./playground/" class="btn btn-success">ลองเลย !!!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+
+    </div>
+    </div>
+    <script>
+        function myFunction() {
+            myVar = setTimeout(showPage, 0);
+        }
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("main").style.display = "block";
+
+        }
+        $(document).ready(() => {
+            $("#menu-toggle").click(function (e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+        });
+        reqHTML();
+    </script>
+</body>
+
+</html>
